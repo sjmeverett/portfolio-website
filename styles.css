@@ -2,28 +2,90 @@
  box-sizing: border-box; 
 }
 
+body {
+  font-family: 'Raleway', 'Open Sans', 'Helvetivca', 'Arial', sans-serif;
+  width: 200vw;
+  overflow: hidden;
+}
+
+section, nav {
+  float: left;
+  height: 100vh;
+}
+
 nav {
-  position: fixed;
-  width: 20%;
-  height: 100%;
+  width: 20vw;
   background: #fff;
-  right: 0;
-  top: 0;
-  padding: 0 20px;
+  padding: 0 40px;
+  background: #3FB8AF;
+  color: white;
+}
+
+nav h1 {
+  font-weight: 300;
+  font-size: 40px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: block;
+  line-height: 35px;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+section {
+  width: 80vw;
+}
+
+.page {
+  height: 100vh;
+  padding-top: 10px;
+}
+
+#copy {
+  padding-left: 30px;
+  overflow: hidden;
 }
 
 #showcase {
-  height: 100vh;
-  width: 80vw;
-  top: 0;
-  left: 0;
   overflow: hidden;
 }
 
 #showcase .reel {
   position: relative;
-  transition: left 0.5s;
-  -webkit-transition: left 0.5s;
+}
+
+.arrow-container {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  right: 20%;
+  padding-right: 10px;
+  bottom: 0;
+}
+
+.arrow {
+  background: white;
+  font-size: 40px;
+  border-radius: 50%;
+  display: block;
+  float: right;
+  text-align: center;
+  line-height: 35px;
+  width: 50px;
+  height: 50px;
+  color: #aaa;
+  border: 2px solid #aaa;
+  bottom: 20px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 #showcase .img {
@@ -37,10 +99,29 @@ nav {
   bottom: 60px;
   left: 30px;
   max-width: 80%;
-  transition: opacity 2s;
-  -webkit-transition: opacity 2s;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 
-#showcase .img img {
+@media (max-width: 1200px) {
+  body {
+    overflow: auto;
+  }
   
+  nav, section {
+    float: none;
+    width: 100vw;
+  }
+  
+  nav, #copy, .page {
+    height: auto;
+  }
+  
+  nav {
+    padding: 20px;
+  }
+  
+  .arrow-container {
+    right: 0;
+  }
 }

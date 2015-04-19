@@ -6,22 +6,15 @@
     <title>Catherine Everett &mdash; jewelry designer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="normalise.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="jquery-1.11.2.min.js"></script>
     <script src="index.js"></script>
   </head>
   
-  <body>
-    <nav>
-      <h1>Catherine Everett</h1>
-      <ul>
-        <li><a href="">Showcase</a></li>
-        <li><a href="">Biography</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-    
+  <body class="text">
+    <a name="showcase"></a>
     <section id="showcase">
       <div class="reel">
         <div class="img">
@@ -49,16 +42,37 @@
           </div>
         </div>
       </div>
+      
+      <div class="arrow-container">
+        <a class="arrow right-arrow">
+          &raquo;
+        </a>
+        <a class="arrow left-arrow">
+          &laquo;
+        </a>
+      </div>
     </section>
     
-    <section id="bio">
+    <nav>
       <h1>Catherine Everett</h1>
-      <p>The bio.</p>
-    </section>
+      <ul>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     
-    <section id="contact">
-      <h1>Contact</h1>
-      <p>Contact info</p>
+    <section id="copy">
+      <div class="page biography-page">
+        <a name="biography"></a>
+        <h1>Biography</h1>
+        <p>The bio.</p>
+      </div>
+      <div class="page contact-page">
+        <a name="contact"></a>
+        <h1>Contact</h1>
+        <p>Contact info</p>
+      </div>
     </section>
   </body>
 </html>
