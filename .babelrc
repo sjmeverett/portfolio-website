@@ -1,0 +1,4 @@
+{
+  "optional": ["asyncToGenerator"],
+  "blacklist": ["regenerator"]
+}

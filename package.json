@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-site",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "~4.12.3",
+    "babel": "~5.0.12",
+    "commander": "~2.7.1",
+    "nedb": "~1.1.2",
+    "bluebird": "~2.9.24"
+  }
+}
