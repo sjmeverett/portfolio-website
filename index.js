@@ -50,15 +50,12 @@ $(function () {
         if (link[1] === 'showcase') {
           $('html,body').animate({scrollLeft: 0});
         } else {
-          $('html,body').animate({scrollLeft: $('nav').offset().left});
+          $('html,body').animate({scrollLeft: $('nav').offset().left + 'px'});
           
-          var page = $('.' + link[1] + '-page');
-          var top = page.offset().top;
-          
-          if (top)
-            $('#copy').animate({scrollTop: top});
-          
-          page.animate({scrollTop: 0});
+          var bookmark = $('a[name="' + link[1] + '"]');
+          var top = $('#copy').scrollTop() + bookmark.offset().top;
+          $('#copy').animate({scrollTop: top + 'px'});
+          bookmark.parent().animate({scrollTop: 0});
         }
       }
       
