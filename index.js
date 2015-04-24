@@ -42,25 +42,26 @@ $(function () {
   $('.left-arrow').click(next.bind(null, -1));
   $('.right-arrow').click(next.bind(null, 1));
   
-  $('a[href="#showcase"]').click(function () {
+  $('nav a').click(function () {
     if (!small) {
-      $('html,body').animate({scrollLeft: 0});
-      return false;
-    }
-  });
-  
-  $('a[href="#biography"]').click(function () {
-    if (!small) {
-      $('html,body').animate({scrollLeft: $('nav').offset().left});
-      $('#copy').animate({scrollTop: $('.biography-page').offset().top});
-      return false;
-    }
-  });
-  
-  $('a[href="#contact"]').click(function () {
-    if (!small) {
-      $('html,body').animate({scrollLeft: $('nav').offset().left});
-      $('#copy').animate({scrollTop: $('.contact-page').offset().top});
+      var link = this.href.match(/#(.*)$/) || [];
+      
+      if (link[1]) {
+        if (link[1] === 'showcase') {
+          $('html,body').animate({scrollLeft: 0});
+        } else {
+          $('html,body').animate({scrollLeft: $('nav').offset().left});
+          
+          var page = $('.' + link[1] + '-page');
+          var top = page.offset().top;
+          
+          if (top)
+            $('#copy').animate({scrollTop: top});
+          
+          page.animate({scrollTop: 0});
+        }
+      }
+      
       return false;
     }
   });

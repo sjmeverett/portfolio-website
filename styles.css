@@ -6,6 +6,8 @@ body {
   font-family: 'Raleway', 'Open Sans', 'Helvetivca', 'Arial', sans-serif;
   width: 200vw;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 section, nav {
@@ -46,7 +48,14 @@ section {
 
 .page {
   height: 100vh;
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-right: 30px;
+  overflow: auto;
+}
+
+a.bookmark {
+  margin-bottom: 30px;
+  display: block;
 }
 
 #copy {
