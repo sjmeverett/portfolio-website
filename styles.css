@@ -116,6 +116,7 @@ a.bookmark {
   bottom: 20px;
   margin-right: 20px;
   cursor: pointer;
+  font-weight: 300;
 }
 
 #showcase .img {

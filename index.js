@@ -1,8 +1,11 @@
-$(function () {
+
+imagesLoaded('.reel', function () {
   var imgs = [];
   var index = 0;
   var timeout = null;
   var small = false;
+  
+  resize();
   
   function next(inc) {
     var img = imgs[index = (index + inc) % imgs.length];
@@ -36,8 +39,6 @@ $(function () {
     $('.reel').width(reelwidth);
     next(0);
   }
-  
-  resize();
   
   $('.left-arrow').click(next.bind(null, -1));
   $('.right-arrow').click(next.bind(null, 1));
